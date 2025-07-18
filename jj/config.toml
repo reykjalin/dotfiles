@@ -1,0 +1,25 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Kristófer Reykjalín"
+email = "kristofer@thorlaksson.com"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOCSUTJT2azsk2+c+zlJ9OWeet7GBeNCjSPu9Ua06AD7"
+backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+backends.ssh.allowed-signers = "~/.config/git/allowed_signers"
+
+[templates]
+draft_commit_description ='''
+    concat(
+      coalesce(description, default_commit_description, "\n"),
+      surround(
+        "\nJJ: This commit contains the following changes:\n", "",
+        indent("JJ:     ", diff.stat(72)),
+      ),
+      "\nJJ: ignore-rest\n",
+      diff.git(),
+    )
+'''
