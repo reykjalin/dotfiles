@@ -1,0 +1,5 @@
+conf.d/ignore*
+fish_variables
+functions/ignore*
+themes/ignore*
+.DS_Store

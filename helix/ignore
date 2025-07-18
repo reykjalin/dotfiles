@@ -1,0 +1,13 @@
+# unignore in file picker and global search.
+!.github/
+
+!.gitignore
+!.gitattributes
+
+!.env*
+
+!.prettierrc
+!.eslintrc
+
+!.builds
+!.github

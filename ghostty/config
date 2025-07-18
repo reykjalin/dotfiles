@@ -1,0 +1,30 @@
+font-family = 0xProto
+
+shell-integration-features = sudo
+
+keybind = global:cmd+shift+grave_accent=toggle_quick_terminal
+
+# Disable ligatures since I'm not using 0xProto with ligature support.
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+theme = catppuccin-mocha
+
+macos-icon = custom-style
+macos-icon-frame = chrome
+macos-icon-screen-color = #FF00FF
+macos-icon-ghost-color = #FF00FF
+
+# Set left option to alt
+macos-option-as-alt = left
+
+# Allow text to show up in cursor with catppuccin colors.
+cursor-color = #f5e0dc
+cursor-text = #11111b
+
+# Maximize Ghostty on startup
+# maximize = true # For some reason this isn't working, setting width/height instead.
+window-height = 6000
+window-width = 6000
+

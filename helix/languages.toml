@@ -1,0 +1,39 @@
+# Extends the base config from https://github.com/helix-editor/helix/blob/master/languages.toml
+
+[language-server.efm]
+command = "efm-langserver"
+
+[language-server.vtsls]
+command = "vtsls"
+args = [ "--stdio" ]
+
+[[language]]
+name = "markdown"
+
+# Soft-wrap markdown files.
+[language.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+
+[[language]]
+name = "html"
+language-servers = [ "superhtml" ]
+
+[[language]]
+name = "typescript"
+language-servers = [ "vtsls" ]
+formatter = { command = "npx", args = [ "prettier", "--parser", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "vtsls" ]
+formatter = { command = "npx", args = [ "prettier", "--parser", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "svelte"
+language-servers = [ "vtsls" ]
+formatter = { command = "npx", args = [ "prettier", "--parser", "svelte" ] }
+auto-format = true

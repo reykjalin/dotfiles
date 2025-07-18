@@ -1,0 +1,6 @@
+.DS_Store
+.zed
+.helix
+.envrc
+devenv.*
+.phpactor.*

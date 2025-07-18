@@ -1,0 +1,42 @@
+theme = "catppuccin_mocha"
+# theme = "catppuccin_latte"
+
+[editor]
+auto-pairs = false
+bufferline = "multiple"
+color-modes = true
+completion-replace = true
+cursorline = true
+end-of-line-diagnostics = "hint"
+line-number = "relative"
+popup-border = "all"
+rulers = [ 100 ]
+scroll-lines = 1
+text-width = 100
+true-color = true
+undercurl = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal.space.o]
+t = ":sh zellij run -n dev-test -f -x 10%% -y 10%% --width 80%% --height 80%% -- dev test %{buffer_name}"
+l = ":sh zellij run -n stylelint -f -x 10%% -y 10%% --width 80%% --height 80%% -- npx stylelint %{buffer_name}"
+e = ":sh zellij run -n eslint -f -x 10%% -y 10%% --width 80%% --height 80%% -- npx eslint %{buffer_name}"
+
+[keys.normal.space.o.g]
+d = [":sh echo %{buffer_name} | pbcopy", ":vsplit-new", ":set-language diff", ":insert-output pbpaste | git diff"]
+D = [":vsplit-new", ":set-language diff", ":insert-output git diff"]
+
