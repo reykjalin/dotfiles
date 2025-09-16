@@ -33,6 +33,12 @@ formatter = { command = "npx", args = [ "prettier", "--parser", "typescript" ] }
 auto-format = true
 
 [[language]]
+name = "javascript"
+language-servers = [ "vtsls" ]
+formatter = { command = "npx", args = [ "prettier"] }
+auto-format = true
+
+[[language]]
 name = "svelte"
 language-servers = [ "vtsls" ]
 formatter = { command = "npx", args = [ "prettier", "--parser", "svelte" ] }

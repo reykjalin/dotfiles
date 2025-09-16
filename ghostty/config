@@ -1,6 +1,6 @@
 font-family = 0xProto
 
-shell-integration-features = sudo
+shell-integration-features = sudo,ssh-terminfo
 
 keybind = global:cmd+shift+grave_accent=toggle_quick_terminal
 
@@ -9,7 +9,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
-theme = Catppuccin Mocha
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 macos-icon = custom-style
 macos-icon-frame = chrome
