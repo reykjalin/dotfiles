@@ -9,7 +9,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 
 macos-icon = custom-style
 macos-icon-frame = chrome
